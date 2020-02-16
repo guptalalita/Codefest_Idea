@@ -1,0 +1,143 @@
+<!--
+  Generated template for the Home1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Forms with formBuilder</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="todo" (ngSubmit)="logForm()">
+    <!-- <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item> -->
+    
+    <!-- ref: https://www.npmjs.com/package/ionic3-calendar-en -->
+    <!-- dependency `npm install moment --save -->
+
+    <ion-card>
+      <ion-card-header align="center"><h1>Calendar</h1></ion-card-header>
+        <ion-calendar #calendar (onDaySelect)="onDaySelect($event)"></ion-calendar>
+    </ion-card>
+
+    <!-- <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-list radio-group formControlName="preferredLanguage">
+              <ion-card-header>
+                Select Preferred Language1
+              </ion-card-header>
+              <ion-card-content>
+              <ion-item>
+                <ion-label>English</ion-label>
+                <ion-radio value="English"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Hindi</ion-label>
+                <ion-radio value="hindi"></ion-radio>
+              </ion-item>
+            </ion-card-content>
+            </ion-list>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-list radio-group formControlName="preferredLanguage">
+              <ion-card-header>
+                Select Preferred Language2
+              </ion-card-header>
+              <ion-card-content>
+              <ion-item>
+                <ion-label>French</ion-label>
+                <ion-radio value="french"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Korean</ion-label>
+                <ion-radio value="korean"></ion-radio>
+              </ion-item>
+            </ion-card-content>
+            </ion-list>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+    
+    
+
+    <ion-card>
+      <ion-list radio-group formControlName="milk">
+        <ion-card-header>
+          <b>Milk</b>
+        </ion-card-header>
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio value="yes"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio value="no"></ion-radio>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+  <ion-card>
+    <ion-list radio-group formControlName="newsPaper">
+      <ion-card-header>
+        <b>News Paper</b>
+      </ion-card-header>
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio value="yes"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio value="no"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list radio-group formControlName="maid">
+      <ion-card-header>
+      <b>Maid</b>
+      </ion-card-header>
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio value="yes"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio value="no"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list radio-group formControlName="schoolBus">
+      <ion-card-header>
+      <b>School Bus</b>
+      </ion-card-header>
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio value="yes"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio value="no"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+  </form>
+</ion-content>
