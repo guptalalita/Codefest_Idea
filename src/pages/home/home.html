@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Forms with ngModel
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  The world is your oyster.
+  <!-- <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">Docs</a> will be your guide.
+  </p> -->
+  <!-- <form>
+    <ion-list>
+      <ion-input type="text" name="username">Username</ion-input>
+    </ion-list>
+  </form> -->
+
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description"></ion-textarea>
+    </ion-item>
+
+    <button ion-button type="submit" block>Add Todo</button>
+  </form>
+</ion-content>

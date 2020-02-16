@@ -1,0 +1,7 @@
+{
+  "name": "CodeFest_Idea",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
